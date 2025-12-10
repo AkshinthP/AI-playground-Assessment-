@@ -1,4 +1,3 @@
-README.md (Assessment Version – For Akshinth Pankan)
 AI Playground – Frontend Assessment Project
 
 This project is a frontend-only AI Playground built using React, TypeScript, Tailwind CSS, and Storybook.
