@@ -1,221 +1,282 @@
-AI Playground – Frontend Assessment Project
+AI Playground – Frontend Assessment
 
-This project is a frontend-only AI Playground built using React, TypeScript, Tailwind CSS, and Storybook.
-It allows users to experiment with AI model settings such as model selection, temperature, max tokens, prompt templates, and chat-style responses.
-All model outputs are simulated using a mock API.
-The objective is to demonstrate UI/UX design, component-driven architecture, and frontend development skills.
+A modern, React + TypeScript + Tailwind CSS interface for experimenting with AI models, parameters, and prompts.
+Built as part of a Frontend & UI/UX Designer Assessment, this project demonstrates research, UI design, component engineering, accessibility, responsive layouts, and Storybook documentation.
 
-Project Links
+
+---
+
+Live Demo
+
+Vercel Deployment:
+https://ai-playground-assessment.vercel.app/
+
+
+---
+
+Figma Design
+
+The UI was first designed in Figma before implementation.
+Figma Link:
+https://www.figma.com/design/doSj6CizIQsbI2Vh8EoXk6/AIplayground?node-id=0-1&t=HgrQwKiDJud74FHe-1
+
+
+---
 
 GitHub Repository
-https://github.com/AkshinthP/AI-playground-Assessment-.git
 
-Figma Mockup
-https://www.figma.com/design/doSj6CizIQsbI2Vh8EoXk6/AIplayground?node-id=0-1&t=HgrQwKiDJud74FHe-1
+https://github.com/AkshinthP/AI-playground-Assessment-
 
-Netlify Hosted Demo
-<YOUR_NETLIFY_URL>
 
-(Replace with the final Netlify link after deployment)
+---
 
-1. Project Overview
+1. Overview
 
-This project demonstrates:
+The AI Playground is a frontend-only prototype that mimics essential functionality from leading AI model interfaces.
+The UI allows users to:
 
-• UI/UX design translated directly from a Figma mockup
-• React + TypeScript development using Vite
-• Tailwind CSS for a scalable design system
-• Storybook documentation for UI components
-• React Context API for global state management
-• Mock API integration using static JSON files
-• Light and dark theme switching
-• A desktop-first AI Playground layout
+Select an AI model
 
-Real AI APIs are not used; responses are intentionally mocked to meet assessment requirements.
+Adjust generation parameters
 
-2. Assessment Requirements Covered
+Write prompts
 
-The assessment required the following:
+View mock assistant responses
 
-A working AI Playground UI
+Load templates
 
-Model selection and parameter controls
+Download JSON metadata
 
-Prompt input and output panel
+Use light/dark theme
 
-Chat-style interface
+Navigate via responsive layout
 
-A mock backend (JSON)
+Review component stories via Storybook
 
-Light and dark theme support
 
-A Figma mockup
+This project uses mock API responses to simulate real AI outputs, as required by the assessment.
 
-A hosted demo link
 
-Storybook documentation
+---
 
-GitHub repository with clean structure
+2. Tech Stack
 
-All items listed above are fully implemented.
+Core Technologies
 
-3. Research
+React (with TypeScript, strict mode enabled)
 
-Research focused on analyzing modern AI tools to understand common UI patterns.
+Vite (fast bundler)
 
-OpenAI Playground
-• Sidebar model settings
-• Prompt editor and response flow
+Tailwind CSS
 
-Anthropic Claude
-• Clean, readable chat-style interface
+Storybook (UI component documentation)
 
-HuggingFace Spaces
-• Parameter-based model experimentation
+Mock API (/src/data JSON files)
 
-Microsoft Copilot
-• Focus on simplicity and accessibility
+React Context (global state & theme management)
 
-Patterns applied in this project include:
-• Left-side setup panel
-• Right-side prompt and chat display
-• Card-based UI grouping
-• Clean spacing and minimalistic typography
 
-4. Figma Design
+Deployment
 
-A full desktop mockup was created in Figma to guide:
+Vercel (Production build + hosting)
 
-• Layout structure
-• Component grouping
-• Visual hierarchy and spacing
-• Typography and color selection
 
-Figma Mockup Link
-https://www.figma.com/design/doSj6CizIQsbI2Vh8EoXk6/AIplayground?node-id=0-1&t=HgrQwKiDJud74FHe-1
 
-The final UI closely reflects the design specifications from the mockup.
+---
 
-5. Visual System
+3. Research Summary
 
-Font Family
-Inter
+Reviewed 5 popular AI UIs:
 
-Typography
-• Page Title: 28px
-• Section Label: 11px
-• Body Text: 14px
-• Helper Text: 11px
+1. OpenAI Playground
 
-Light Mode Colors
-• Background: #F8FAFC
-• Card: #FFFFFF
-• Border: #E2E8F0
-• Primary: #6366F1
-• Heading text: #0F172A
 
-Dark Mode Colors
-• Background: #0F172A
-• Card: #1E293B
-• Border: #334155
-• Primary: #4F46E5
-• Text: #F8FAFC
+2. Anthropic Claude UI
 
-Component Styling
-Cards use rounded edges, borders, and shadows.
-Buttons follow primary (indigo) and secondary (slate) patterns.
-Chat bubbles differ based on user and assistant roles.
 
-6. Development
+3. HuggingFace Spaces
 
-Tech Stack
-• React (Vite)
-• TypeScript
-• Tailwind CSS
-• Storybook
-• React Context API
-• Local JSON mock API
 
-Architecture
+4. Microsoft Copilot Lab
 
-ThemeContext
-• Manages light and dark appearance
-• Syncs preference to localStorage
 
-AppStateContext
-• Loads mock model/template data
-• Stores prompt input
-• Generates simulated model responses
-• Tracks chat history
-• Handles loading and error states
+5. Gemini Advanced
 
-Mock API (public folder)
-• models.json
-• templates.json
 
-7. Storybook
 
-Storybook is used to build and test UI components in isolation.
+Key features adopted:
 
-Documented components:
-• Button
-• Slider
-• Modal
-• ChatBubble
+Model selector
 
-Run Storybook
+Temperature slider
+
+Max tokens limiter
+
+Prompt input panel
+
+Response panel
+
+Template loader
+
+JSON export
+
+Light/Dark theme toggle
+
+
+These features formed the final 6 core functions requested in the assessment.
+
+
+---
+
+4. UI/UX Design Summary
+
+The design goal was to create a minimal, clean, and accessible interface.
+
+Main design choices:
+
+Soft neutral backgrounds
+
+Rounded card containers
+
+High contrast buttons
+
+Uniform spacing system based on Tailwind
+
+Smooth hover and active states
+
+Clean typography hierarchy
+
+Dark mode with the same visual structure
+
+Responsive layout (desktop → mobile collapse)
+
+
+The interface is inspired by the simplicity of OpenAI Playground and Claude.
+
+
+---
+
+5. Development Overview
+
+Components Implemented
+
+ModelSelector – Dropdown for GPT-3.5 / GPT-4 / Custom model
+
+ParametersPanel – Temperature + max tokens sliders
+
+PromptEditor – Textarea with templates button
+
+ChatPanel – Displays simulated responses
+
+ChatBubble – User vs assistant messages
+
+ThemeToggle – Light/dark mode
+
+AppStateContext – Centralized UI state management
+
+
+Functionality
+
+Mock fetch for templates and model metadata
+
+Simulated AI response generation
+
+State synched across components
+
+Smooth animations for hover/focus
+
+Tailwind-based responsive design
+
+
+
+---
+
+6. Storybook Documentation
+
+Storybook includes stories for:
+
+Button
+
+Slider
+
+Modal
+
+ChatBubble
+
+
+Run Storybook locally:
+
 npm run storybook
 
-8. Running the Project
 
-Install dependencies
+---
+
+7. Installation & Running Locally
+
+git clone https://github.com/AkshinthP/AI-playground-Assessment-
+cd AI-playground-Assessment-
 npm install
-
-Start development server
 npm run dev
 
-Build project
+To build production version:
+
 npm run build
 
-Preview production build
-npm run preview
 
-9. Hosting (Netlify)
+---
 
-The application is hosted using Netlify.
+8. Folder Structure
 
-Hosting settings:
-• Build command: npm run build
-• Publish directory: dist
-• Netlify automatically serves the static build
+src/
+ ├─ components/
+ │   ├─ ModelSelector.tsx
+ │   ├─ ParametersPanel.tsx
+ │   ├─ PromptEditor.tsx
+ │   ├─ ChatPanel.tsx
+ │   ├─ ui/
+ │   │   ├─ Slider.tsx
+ │   │   ├─ ChatBubble.tsx
+ │   │   ├─ Modal.tsx
+ │   │   └─ Button.tsx
+ ├─ context/
+ ├─ data/
+ ├─ stories/
+ ├─ styles/
+ ├─ App.tsx
+ └─ main.tsx
 
-Live Netlify URL
-<YOUR_NETLIFY_URL>
 
-(Add your link once deployed)
+---
 
-10. Known Limitations
+9. Known Limitations
 
-• Chat responses are simulated and not connected to real AI APIs
-• Chat history resets on refresh
-• Templates cannot be modified by users
-• The application is primarily optimized for desktop
+Responses are mocked for UI testing.
 
-11. Conclusion
+No real AI API integration (per assessment guidelines).
 
-This project demonstrates end-to-end frontend execution including:
-• Research and analysis of existing AI products
-• UI/UX design in Figma
-• Component-driven React development
-• Tailwind CSS design system
-• Storybook documentation
-• Mock API architecture
-• Netlify hosting
+Storybook deploy not included.
 
-It reflects strong understanding of frontend development principles and modern UI design.
 
-12. Author
+
+---
+
+10. Assessment Deliverables Checklist
+
+Submitted:
+
+✔ Research
+✔ Design mockup (Figma)
+✔ Full TypeScript implementation
+✔ Mock API
+✔ Storybook components
+✔ README (Research, Design, Development)
+✔ Deployment Link
+✔ GitHub repository
+
+
+---
+
+11. Author
 
 Akshinth Pankan
-Frontend Developer – React and TypeScript
-GitHub: https://github.com/AkshinthP
+Frontend Developer | React | UI/UX | TypeScript
