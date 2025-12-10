@@ -1,0 +1,12 @@
+[
+  {
+    "id": "intro",
+    "name": "Product Description",
+    "content": "Write a concise product description for:"
+  },
+  {
+    "id": "bug-report",
+    "name": "Bug Report Helper",
+    "content": "You are a helpful assistant. Help me debug this issue:"
+  }
+]
